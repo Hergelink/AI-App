@@ -1,0 +1,69 @@
+/* TITLE AREA */
+
+.infoArea {
+    width: 90%;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    text-align: center;
+} 
+
+
+
+/* FORM AREA */
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-inline: auto;
+}
+
+label {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: white;
+    color: black;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    margin-top: 1rem;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+
+/* AI RESPONSE AREA */
+
+.responseDiv {
+    margin-top:4rem;
+    width: 90%;
+    height: 500px;
+    margin-inline: auto;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.responseDiv span {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.aiResponseTitle {
+    width: 100%;
+}
+
+.aiResponse {
+    width: 100%;
+    min-height: 200px;
+}
