@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
-import './BlogContentPage.css';
+import './ProductDescriptionPage.css';
 import loadingCube from '../../images/klevvvers-cube.png';
 
-export default function BlogContentPage() {
+export default function ProductDescriptionPage() {
   const [userPrompt, setUserPrompt] = useState('');
 
   const [responseTitle, setResponseTitle] = useState(
@@ -50,7 +50,7 @@ export default function BlogContentPage() {
   };
 
   return (
-    <div>
+    <div className='productDiv'>
       <div className='infoArea'>
         <h1>Generate Product Descriptions</h1>
         <p>

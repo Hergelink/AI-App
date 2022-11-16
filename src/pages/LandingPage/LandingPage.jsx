@@ -29,7 +29,7 @@ export default function LandingPage() {
           <div className='featureItem'>
             <h3>Product description generator</h3>
             <p>generate product decriptions for your need.</p>
-            <Link to='/blog-content' className='checkItOutBtn'>Check it out!</Link>
+            <Link to='/product-description' className='checkItOutBtn'>Check it out!</Link>
           </div>
         </div>
       </div>

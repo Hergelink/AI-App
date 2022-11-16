@@ -90,7 +90,19 @@ button:hover {
     min-height: 200px;
 }
 
+@media (min-width: 768px) {
+  .productDiv {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
+  label {
+    width: 100%;
+  }
+}
 
 
 @media (prefers-reduced-motion: no-preference) {

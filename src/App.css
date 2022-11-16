@@ -24,6 +24,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logocontainer {
@@ -41,6 +42,71 @@ header {
 .logocontainer img {
   width: 180px;
 }
+
+.hamburgerDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburgerDiv span {
+  display: block;
+  background-color: black;
+  color: black;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.mobileModal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  border-right: 1px solid black;
+}
+
+.modalLogoDiv {
+  width: 180px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modalLogoDiv img {
+  width: 100%;
+}
+
+.modalLinksContainer {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.modalLinksContainer a {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.modalLinksContainer a:hover {
+  color: rgb(23, 23, 23);
+  font-size: 1.22rem;
+}
+
+.modalLinksContainer hr {
+  width: 70%;
+  margin-bottom: 0.5rem;
+  opacity: 0.5;
+}
+
+
 
 main {
   /* min-height: 100vh; */
