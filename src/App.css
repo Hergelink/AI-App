@@ -4,17 +4,42 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-family: 'Roboto', sans-serif;
 }
 
+/* HEADER AREA */
+
 header {
   height: 8rem;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.headerContainer {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logocontainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  height: 6rem;
+
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+.logocontainer img {
+  width: 180px;
 }
 
 main {

@@ -1,3 +1,75 @@
-h1 {
+.informationContainer {
+    width: 90%;
+    margin-inline: auto;
     text-align: center;
+}
+
+h1 {
+    margin-bottom: 1.2rem;
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-weight: 400;
+}
+
+.coverImageContainer {
+    width: 100%;
+    margin-top: 3rem;
+    
+    border-radius: 2px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.coverImageContainer img{
+    width: 100%;
+    height: 100%;
+}
+
+#trustedP {
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.thirdInfoDiv {
+    text-align: left;
+}
+
+.thirdInfoDiv h3 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.featuresDiv {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.featureItem {
+    text-align: left;
+    background-color: beige;
+    height: 120px;
+    padding: 5px;
+}
+
+.featureItem h3 {
+    background-color: transparent;
+    margin-top: 0.3rem;
+}
+
+.featureItem p {
+    background-color: transparent;
+}
+.checkItOutBtn {
+    display: block;
+    margin-top: 2rem;
+    background-color: transparent;
 }
