@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import './BlogContentPage.css';
+import loadingCube from '../../images/klevvvers-cube.png';
 
 export default function BlogContentPage() {
   const [userPrompt, setUserPrompt] = useState('');
@@ -10,9 +11,12 @@ export default function BlogContentPage() {
   );
   const [aiResponse, setAiResponse] = useState('...await the response');
 
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    setLoading(true);
     // {userPrompt} send this to api
 
     // OPEN AI-START
@@ -28,7 +32,8 @@ export default function BlogContentPage() {
         model: 'text-davinci-002',
         prompt: `Write a detailed, smart, informative and professional product description for ${userPrompt}`,
         temperature: 1,
-        max_tokens: 200,
+        // max_tokens: 200,
+        max_tokens: 30,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
@@ -41,6 +46,7 @@ export default function BlogContentPage() {
       });
 
     // OPEN AI-END
+    setLoading(false);
   };
 
   return (
@@ -52,7 +58,7 @@ export default function BlogContentPage() {
           the name and product description to get started.
         </p>
       </div>
-      <hr className='blogPageHr'/>
+      <hr className='blogPageHr' />
       <div className='inputArea'>
         <label>
           What Product Would You like to get a description for?
@@ -62,9 +68,15 @@ export default function BlogContentPage() {
       </div>
       <hr className='blogPageHr' />
       <div className='responseDiv'>
-        <span className='aiResponseTitle'>{responseTitle}</span>
-        <hr />
-        <span className='aiResponse'>{aiResponse}</span>
+        {!loading ? (
+          <>
+            <span className='aiResponseTitle'>{responseTitle}</span>
+            <hr />
+            <span className='aiResponse'>{aiResponse}</span>
+          </>
+        ) : (
+          <img src={loadingCube} className='loading' />
+        )}
       </div>
     </div>
   );
