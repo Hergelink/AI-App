@@ -31,12 +31,11 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  
+
   height: 6rem;
 
   text-decoration: none;
   cursor: pointer;
-  
 }
 
 .logocontainer img {
@@ -69,7 +68,7 @@ header {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  
+
   border-right: 1px solid black;
 }
 
@@ -106,8 +105,6 @@ header {
   opacity: 0.5;
 }
 
-
-
 main {
   /* min-height: 100vh; */
   display: flex;
@@ -132,21 +129,21 @@ footer h4 {
   color: white;
 }
 
+@media (min-width: 768px) {
+  main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
+  .productDiv {
+    max-width: 800px;
+  }
 
-/* Create rotate effect for the logo later */
-/* 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .headerContainer {
+    max-width: 800px;
   }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

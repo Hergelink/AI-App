@@ -5,7 +5,7 @@ import aiImage from '../../images/ai-img.png';
 
 export default function LandingPage() {
   return (
-    <div>
+    <div className='productDiv'>
       <div className='informationContainer'>
         <h1>Generate text content on demand with the help of AI</h1>
         <h4>
