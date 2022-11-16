@@ -52,17 +52,18 @@ export default function BlogContentPage() {
           the name and product description to get started.
         </p>
       </div>
-      <hr />
+      <hr className='blogPageHr'/>
       <div className='inputArea'>
         <label>
           What Product Would You like to get a description for?
           <input type='text' onChange={(e) => setUserPrompt(e.target.value)} />
         </label>
-        <button onClick={handleSubmit}>get ai suggestions</button>
+        <button onClick={handleSubmit}>Generate description</button>
       </div>
-      <hr />
+      <hr className='blogPageHr' />
       <div className='responseDiv'>
         <span className='aiResponseTitle'>{responseTitle}</span>
+        <hr />
         <span className='aiResponse'>{aiResponse}</span>
       </div>
     </div>

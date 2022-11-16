@@ -52,13 +52,19 @@ main {
 
 footer {
   /* delete margin top later */
-  margin-top: 20rem;
-  height: 3rem;
+  margin-top: 4rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: black;
+  color: white;
 }
 
+footer h4 {
+  background-color: black;
+  color: white;
+}
 
 
 

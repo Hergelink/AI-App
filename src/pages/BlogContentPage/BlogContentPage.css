@@ -7,9 +7,11 @@
     
 } 
 
-hr {
+.blogPageHr {
     width: 90%;
     margin-inline: auto;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
 }
 
 
@@ -45,7 +47,14 @@ button {
     margin-top: 0.5rem;
     background-color: black;
     color: white;
+    font-weight: 400;
+    border: 0;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(46, 46, 46);
 }
 
 /* AI RESPONSE AREA */
@@ -64,8 +73,12 @@ button {
 
 .responseDiv span {
     display: block;
-    margin-bottom: 1rem;
-    
+    margin-bottom: 0.7rem; 
+}
+
+.responseDiv hr {
+  margin-bottom: 0.7rem;
+  width: 100%;
 }
 
 .aiResponseTitle {

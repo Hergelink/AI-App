@@ -18,7 +18,7 @@ export default function LandingPage() {
         </div>
 
         <p id='trustedP'>Trusted by high performing brands</p>
-        <hr />
+        <hr className='landingPageHr'/>
 
         <div className='thirdInfoDiv'>
           <h3>Automatically generate unique and human-like copy in seconds.</h3>
