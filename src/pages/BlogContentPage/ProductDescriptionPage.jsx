@@ -9,6 +9,9 @@ export default function ProductDescriptionPage() {
   const [responseTitle, setResponseTitle] = useState(
     'The response from AI will be shown below:'
   );
+
+  const [temperature, setTemperature] = useState(0);
+  
   const [aiResponse, setAiResponse] = useState('...await the response');
 
   const [loading, setLoading] = useState(false);
@@ -32,6 +35,7 @@ export default function ProductDescriptionPage() {
         model: 'text-davinci-002',
         prompt: `Write a detailed, smart, informative and professional product description for ${userPrompt}`,
         temperature: 1,
+        // temperature: {temperature},
         // max_tokens: 200,
         max_tokens: 30,
         top_p: 1,
@@ -64,6 +68,14 @@ export default function ProductDescriptionPage() {
           What Product Would You like to get a description for?
           <input type='text' onChange={(e) => setUserPrompt(e.target.value)} />
         </label>
+        
+        <div className='rangeSlider'>
+          <div className="rangeInfo">
+          <p>Deterministic</p><p>{temperature}</p> <p>Creative</p>
+          </div>
+          <input type='range' min={0} max={1} step={0.01} value={temperature} onChange={(e) => setTemperature(e.target.value)} className='slider' />
+          
+        </div>
         <button onClick={handleSubmit}>Generate description</button>
       </div>
       <hr className='blogPageHr' />

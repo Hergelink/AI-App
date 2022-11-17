@@ -4,6 +4,10 @@ import logo from '../images/klevvvers-logo.png';
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleClick = () => {
+    setMenuOpen(e => !e);
+  }
+ 
   return (
     <header>
       <div className='headerContainer'>
@@ -11,7 +15,7 @@ export default function Header() {
           <img src={logo} alt='klevvvers logo' />
         </Link>
         <div className='navDiv'>
-          <div className='hamburgerDiv' onClick={() => setMenuOpen((e) => !e)}>
+          <div className='hamburgerDiv' onClick={handleClick}>
             <span></span>
             <span></span>
             <span></span>
@@ -23,9 +27,9 @@ export default function Header() {
               <img src={logo} alt='klevvvers logo' />
             </div>
             <div className='modalLinksContainer'>
-              <Link to='/'>Home Page</Link>
+              <Link to='/' onClick={handleClick}>Home Page</Link>
               <hr />
-              <Link to='/product-description'>Product Description</Link>
+              <Link to='/product-description' onClick={handleClick}>Product Description</Link>
               <hr />
             </div>
           </div>

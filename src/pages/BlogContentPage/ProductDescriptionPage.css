@@ -41,6 +41,27 @@ input {
     border: 1px solid black;
 }
 
+.rangeSlider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rangeInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.slider {
+  margin-top: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
 button {
     width: 150px;
     height: 40px;
