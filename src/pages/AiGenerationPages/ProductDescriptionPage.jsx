@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import '../Pages.css';
 import loadingCube from '../../images/klevvvers-cube.png';
-
+import descriptionIcon from '../../images/title-icons/description-icon.png'
 export default function ProductDescriptionPage() {
   const [userPrompt, setUserPrompt] = useState('');
 
@@ -57,6 +57,11 @@ export default function ProductDescriptionPage() {
   return (
     <div className='productDiv'>
       <div className='infoArea'>
+      <img
+          src={descriptionIcon}
+          alt='description icon'
+          className='titleIcons'
+        />
         <h1>Generate Product Descriptions</h1>
         <p>
           Genereate product descriptions for any type of product, simply enter

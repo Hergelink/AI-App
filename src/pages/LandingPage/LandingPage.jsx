@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.css';
-import aiImage from '../../images/ai-img.png';
+
+import heroImage from '../../images/hero-image.png'
 
 export default function LandingPage() {
   return (
@@ -14,11 +15,11 @@ export default function LandingPage() {
         </h4>
 
         <div className='coverImageContainer'>
-          <img src={aiImage} alt='ai drawn' />
+          <img src={heroImage} alt='ai drawn' />
         </div>
 
         <p id='trustedP'>Trusted by high performing brands</p>
-        <hr className='landingPageHr'/>
+        <hr className='landingPageHr' />
 
         <div className='thirdInfoDiv'>
           <h3>Automatically generate unique and human-like copy in seconds.</h3>
@@ -27,9 +28,57 @@ export default function LandingPage() {
 
         <div className='featuresDiv'>
           <div className='featureItem'>
+          <div className='featureItemContext'>
             <h3>Product description generator</h3>
-            <p>generate product decriptions for your need.</p>
-            <Link to='/product-description' className='checkItOutBtn'>Check it out!</Link>
+            <p>Generate product decriptions for your need.</p>
+            </div>
+            <Link to='/product-description' className='checkItOutBtn'>
+              Check it out!
+            </Link>
+          </div>
+
+          <div className='featureItem'>
+          <div className='featureItemContext'>
+            <h3>Facebook Ads generator</h3>
+            <p>Generate Facebook ad copies fast & simple.</p>
+            </div>
+            <Link to='/facebook-ads' className='checkItOutBtn'>
+              Check it out!
+            </Link>
+          </div>
+
+          <div className='featureItem'>
+          <div className='featureItemContext'>
+            <h3>Google Ads generator</h3>
+            <p>Generate Google ad copies fast & simple.</p>
+            </div>
+            <Link to='/product-description' className='checkItOutBtn'>
+              Check it out!
+            </Link>
+          </div>
+
+          <div className='featureItem'>
+            <div className='featureItemContext'>
+              <h3>Grammar Correction</h3>
+              <p>
+                Correct your sentences with the help of the most powerful
+                language neural network.
+              </p>
+            </div>
+            <Link to='/grammar-correction' className='checkItOutBtn'>
+              Check it out!
+            </Link>
+          </div>
+
+          <div className='featureItem'>
+            <div className='featureItemContext'>
+              <h3>JavaScript helper</h3>
+              <p>Let AI help you with your JavaScript problems.</p>
+            </div>
+
+            <Link to='/javascript-helper' className='checkItOutBtn'>
+              Check it out!
+            </Link>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import '../Pages.css';
 import loadingCube from '../../images/klevvvers-cube.png';
+import javascriptIcon from '../../images/title-icons/javascript-icon.png';
 
 export default function JavaScriptHelperPage() {
   const [userPrompt, setUserPrompt] = useState('');
@@ -54,7 +55,13 @@ export default function JavaScriptHelperPage() {
   return (
     <div className='productDiv'>
       <div className='infoArea'>
+        <img
+          src={javascriptIcon}
+          alt='javascript icon'
+          className='titleIcons'
+        />
         <h1>JavaScript Helper</h1>
+
         <p>
           Ask javascript related questions and let the AI suggest you the
           possible actions you can take.

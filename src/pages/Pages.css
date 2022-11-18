@@ -4,8 +4,13 @@
     width: 90%;
     margin-inline: auto;
     margin-bottom: 1rem;
-    
 } 
+
+
+.titleIcons {
+  width: 34px;
+  height: 34px;
+}
 
 .blogPageHr {
     width: 90%;

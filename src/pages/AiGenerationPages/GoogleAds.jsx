@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import '../Pages.css';
 import loadingCube from '../../images/klevvvers-cube.png';
+import googleIcon from '../../images/title-icons/google-icon.png'
 
 export default function GoogleAds() {
   const [userPrompt, setUserPrompt] = useState('');
@@ -54,6 +55,11 @@ export default function GoogleAds() {
   return (
     <div className='productDiv'>
       <div className='infoArea'>
+      <img
+          src={googleIcon}
+          alt='google icon'
+          className='titleIcons'
+        />
         <h1>Generate Google Ads</h1>
         <p>
           Genereate Google Ads for any type of product, simply enter the name

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import '../Pages.css';
 import loadingCube from '../../images/klevvvers-cube.png';
-
+import facebookIcon from '../../images/title-icons/facebook-icon.png'
 export default function FacebookAdsPage() {
   const [userPrompt, setUserPrompt] = useState('');
 
@@ -56,6 +56,11 @@ export default function FacebookAdsPage() {
   return (
     <div className='productDiv'>
       <div className='infoArea'>
+      <img
+          src={facebookIcon}
+          alt='facebook icon'
+          className='titleIcons'
+        />
         <h1>Generate Facebook Ads</h1>
         <p>
           Genereate Facebook Ads for any type of product, simply enter

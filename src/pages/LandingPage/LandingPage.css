@@ -1,78 +1,110 @@
 .informationContainer {
-    width: 90%;
-    margin-inline: auto;
-    text-align: center;
+  width: 90%;
+  margin-inline: auto;
+  text-align: center;
 }
 
 h1 {
-    margin-bottom: 1.2rem;
-    font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  font-size: 2.2rem;
 }
 
 h4 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .coverImageContainer {
-    width: 100%;
-    margin-top: 3rem;
-    
-    border-radius: 2px;
-    object-fit: cover;
-    overflow: hidden;
+  width: 100%;
+  margin-top: 3rem;
+
+  border-radius: 2px;
+  object-fit: cover;
+  overflow: hidden;
 }
 
-.coverImageContainer img{
-    width: 100%;
-    height: 100%;
+.coverImageContainer img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid black;
+  border-radius: 3px;
 }
 
 #trustedP {
-    margin-top: 1rem;
-    font-weight: 700;
+  margin-top: 1rem;
+  font-weight: 700;
 }
 
 .landingPageHr {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .thirdInfoDiv {
-    text-align: left;
+  text-align: left;
 }
 
 .thirdInfoDiv h3 {
-    margin-bottom: 0.5rem;
-    font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
 }
 
 .featuresDiv {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .featureItem {
-    text-align: left;
-    background-color: rgb(253, 253, 244);
-    border: 1px solid black;
-    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
-    border-radius: 3px;
-    height: 120px;
-    padding: 5px;
+  text-align: left;
+  background-color: white;
+  color: white;
+  border: 1px solid black;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  border-radius: 3px;
+  height: 130px;
+  padding: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.featureItem:hover {
+  background-color: beige;
+  border: 1px solid black;
+}
+.featureItemContext {
+  background-color: transparent;
 }
 
 .featureItem h3 {
-    background-color: transparent;
-    margin-top: 0.3rem;
+  color: black;
+  background-color: transparent;
+  margin-bottom: 0.2rem;
 }
 
 .featureItem p {
-    background-color: transparent;
+  color: black;
+  background-color: transparent;
 }
 .checkItOutBtn {
-    display: block;
-    margin-top: 2rem;
-    background-color: transparent;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 3px;
+  width: 120px;
+  height: 22px;
+  text-align: center;
+
+  background-color: white;
+  color: black;
 }
+
+.checkItOutBtn:hover {
+  
+  
+    background-color: black;
+    color: white;
+  }
