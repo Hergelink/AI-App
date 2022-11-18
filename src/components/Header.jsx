@@ -23,13 +23,17 @@ export default function Header() {
         </div>
         {menuOpen ? (
           <div className='mobileModal'>
-            <div className='modalLogoDiv'>
+            <Link to='/' className='modalLogoDiv' onClick={handleClick}>
               <img src={logo} alt='klevvvers logo' />
-            </div>
+            </Link>
             <div className='modalLinksContainer'>
               <Link to='/' onClick={handleClick}>Home Page</Link>
               <hr />
               <Link to='/product-description' onClick={handleClick}>Product Description</Link>
+              <hr />
+              <Link to='/facebook-ads' onClick={handleClick}>Facebook Ads</Link>
+              <hr />
+              <Link to='/google-ads' onClick={handleClick}>Google Ads</Link>
               <hr />
             </div>
           </div>

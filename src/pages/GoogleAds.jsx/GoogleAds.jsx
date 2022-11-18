@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
-import './ProductDescriptionPage.css';
+import '../Pages.css';
 import loadingCube from '../../images/klevvvers-cube.png';
 
-export default function ProductDescriptionPage() {
+export default function GoogleAds() {
   const [userPrompt, setUserPrompt] = useState('');
 
   const [responseTitle, setResponseTitle] = useState(
     'The response from AI will be shown below:'
   );
 
-  const [temperature, setTemperature] = useState(0);
-  
+  const [temp, setTemp] = useState(1);
+
   const [aiResponse, setAiResponse] = useState('...await the response');
 
   const [loading, setLoading] = useState(false);
@@ -33,19 +33,17 @@ export default function ProductDescriptionPage() {
     const response = await openai
       .createCompletion({
         model: 'text-davinci-002',
-        prompt: `Write a detailed, smart, informative and professional product description for ${userPrompt}`,
+        prompt: `Write a google ad for ${userPrompt}`,
         temperature: 1,
-        // temperature: {temperature},
-        // max_tokens: 200,
-        max_tokens: 30,
+        // temperature: { temp },
+        max_tokens: 200,
+        // max_tokens: 30,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
       })
       .then((response) => {
-        setResponseTitle(
-          `AI Product Description suggestion for: ${userPrompt}`
-        );
+        setResponseTitle(`AI Google ads suggestions for: ${userPrompt}`);
         setAiResponse(response.data.choices[0].text);
       });
 
@@ -56,27 +54,40 @@ export default function ProductDescriptionPage() {
   return (
     <div className='productDiv'>
       <div className='infoArea'>
-        <h1>Generate Product Descriptions</h1>
+        <h1>Generate Google Ads</h1>
         <p>
-          Genereate product descriptions for any type of produtcs, simply enter
-          the name and product description to get started.
+          Genereate Google Ads for any type of product, simply enter the name
+          and product description to get started.
         </p>
       </div>
       <hr className='blogPageHr' />
       <div className='inputArea'>
         <label>
-          What Product Would You like to get a description for?
+          What Product Would You like to get a Google Ad for?
           <input type='text' onChange={(e) => setUserPrompt(e.target.value)} />
         </label>
-        
+
         <div className='rangeSlider'>
-          <div className="rangeInfo">
-          <p>Deterministic</p><p>{temperature}</p> <p>Creative</p>
+          <div className='rangeInfo'>
+            <p>Deterministic</p>
+            <p>{temp}</p>
+            <p>Creative</p>
           </div>
-          <input type='range' min={0} max={1} step={0.01} value={temperature} onChange={(e) => setTemperature(e.target.value)} className='slider' />
-          
+          <input
+            type='range'
+            min={0}
+            max={1}
+            step={0.01}
+            value={temp}
+            onChange={(e) => {
+              const val = e.target.value * 1;
+
+              setTemp(val);
+            }}
+            className='slider'
+          />
         </div>
-        <button onClick={handleSubmit}>Generate description</button>
+        <button onClick={handleSubmit}>Generate Ad Text</button>
       </div>
       <hr className='blogPageHr' />
       <div className='responseDiv'>
