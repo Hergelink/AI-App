@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/klevvvers-logo.png';
+import productIcon from '../images/header-icons/product-icon.png';
+import languageIcon from '../images/header-icons/language-icon.png';
+import codeIcon from '../images/header-icons/code-icon.png';
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleClick = () => {
-    setMenuOpen(e => !e);
-  }
- 
+    setMenuOpen((e) => !e);
+  };
+
   return (
     <header>
       <div className='headerContainer'>
@@ -27,15 +31,44 @@ export default function Header() {
               <img src={logo} alt='klevvvers logo' />
             </Link>
             <div className='modalLinksContainer'>
-              <Link to='/' onClick={handleClick}>Home Page</Link>
+              <Link to='/' onClick={handleClick}>
+                Home Page
+              </Link>
               <hr />
-              <Link to='/product-description' onClick={handleClick}>Product Description</Link>
+              <div className='categoryDiv'>
+                <img src={productIcon} className='categoryIcons' alt='product icon' />
+                <p>Product</p>
+              </div>
+              
+              <Link to='/product-description' onClick={handleClick}>
+                Product Description
+              </Link>
               <hr />
-              <Link to='/facebook-ads' onClick={handleClick}>Facebook Ads</Link>
+              <Link to='/facebook-ads' onClick={handleClick}>
+                Facebook Ads
+              </Link>
               <hr />
-              <Link to='/google-ads' onClick={handleClick}>Google Ads</Link>
+              <Link to='/google-ads' onClick={handleClick}>
+                Google Ads
+              </Link>
               <hr />
-              <Link to='/grammar-correction' onClick={handleClick}>Grammer Correction</Link>
+              <div className='categoryDiv'>
+                <img src={languageIcon} className='categoryIcons' alt='language icon' />
+                <p>Language</p>
+              </div>
+              
+              <Link to='/grammar-correction' onClick={handleClick}>
+                Grammar Correction
+              </Link>
+              <hr />
+              <div className='categoryDiv'>
+                <img src={codeIcon} className='categoryIcons' alt='code icon' />
+                <p>Code</p>
+              </div>
+              
+              <Link to='/javascript-helper' onClick={handleClick}>
+                JavaScript Helper
+              </Link>
               <hr />
             </div>
           </div>

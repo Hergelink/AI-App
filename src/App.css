@@ -105,6 +105,25 @@ header {
   opacity: 0.5;
 }
 
+.categoryDiv {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  padding: 2px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.categoryIcons {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.2rem;
+}
+
+/* MAIN AREA */
+
 main {
   /* min-height: 100vh; */
   display: flex;

@@ -5,6 +5,7 @@ import GoogleAds from '../pages/AiGenerationPages/GoogleAds';
 import LandingPage from '../pages/LandingPage/LandingPage'
 import ProductDescription from '../pages/AiGenerationPages/ProductDescriptionPage'
 import GrammarCorrectionPage from '../pages/AiGenerationPages/GrammarCorrectionPage';
+import JavaScriptHelperPage from '../pages/AiGenerationPages/JavaScriptHelperPage';
 
 export default function Main() {
   return (
@@ -15,6 +16,7 @@ export default function Main() {
         <Route path='/facebook-ads' element={<FacebookAdsPage />} />
         <Route path='/google-ads' element={<GoogleAds />} />
         <Route path='/grammar-correction' element={<GrammarCorrectionPage />} />
+        <Route path='/javascript-helper' element={<JavaScriptHelperPage />} />
       </Routes>
     </main>
   )
