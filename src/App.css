@@ -128,11 +128,18 @@ header {
 
 .LoginBtn {
   width: 100px;
-  background-color: blue;
-  color: white;
+  border: 1px solid rgb(82, 82, 248);
+  background-color: white;
+  color: rgb(82, 82, 248);
   border-radius: 8px;
   text-align: center;
   margin-left: 2rem;
+  cursor: pointer;
+}
+
+.LoginBtn:hover {
+  background-color: rgb(82, 82, 248);
+  color: white;
 }
 
 /* MAIN AREA */
@@ -187,15 +194,13 @@ footer h4 {
     /* bottom: -12.8rem; */
     bottom: -12.5rem;
     left: -2.2rem;
-    
+
     width: 160px;
     height: 200px;
-    
+
     border-top: 4px solid black;
     background-color: rgb(82, 82, 248);
     border-radius: 0 0 8px 8px;
-    
-    
   }
 
   .categoryItems {
@@ -218,9 +223,7 @@ footer h4 {
   }
 
   .categoryMenuOpen a:hover {
-    
     text-decoration: underline;
-    
   }
 
   /* MAIN AREA */
