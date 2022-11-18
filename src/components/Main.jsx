@@ -1,9 +1,10 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom';
-import FacebookAdsPage from '../pages/FacebookAdsPage/FacebookAdsPage';
-import GoogleAds from '../pages/GoogleAds.jsx/GoogleAds';
+import FacebookAdsPage from '../pages/AiGenerationPages/FacebookAdsPage';
+import GoogleAds from '../pages/AiGenerationPages/GoogleAds';
 import LandingPage from '../pages/LandingPage/LandingPage'
-import ProductDescription from '../pages/ProductDescriptionPage/ProductDescriptionPage'
+import ProductDescription from '../pages/AiGenerationPages/ProductDescriptionPage'
+import GrammarCorrectionPage from '../pages/AiGenerationPages/GrammarCorrectionPage';
 
 export default function Main() {
   return (
@@ -13,6 +14,7 @@ export default function Main() {
         <Route path='/product-description' element={<ProductDescription />} />
         <Route path='/facebook-ads' element={<FacebookAdsPage />} />
         <Route path='/google-ads' element={<GoogleAds />} />
+        <Route path='/grammar-correction' element={<GrammarCorrectionPage />} />
       </Routes>
     </main>
   )

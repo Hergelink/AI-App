@@ -35,6 +35,8 @@ export default function Header() {
               <hr />
               <Link to='/google-ads' onClick={handleClick}>Google Ads</Link>
               <hr />
+              <Link to='/grammar-correction' onClick={handleClick}>Grammer Correction</Link>
+              <hr />
             </div>
           </div>
         ) : (
