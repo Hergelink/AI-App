@@ -29,7 +29,7 @@ export default function JavaScriptHelperPage() {
 
     const openai = new OpenAIApi(configuration);
 
-    const response = await openai
+    await openai
       .createCompletion({
         model: 'text-davinci-002',
         prompt: `Show me how can i achive ${userPrompt} with javascript`,
@@ -80,7 +80,7 @@ export default function JavaScriptHelperPage() {
             <span className='aiResponse'>{aiResponse}</span>
           </>
         ) : (
-          <img src={loadingCube} className='loading' />
+          <img src={loadingCube} alt='loading' className='loading' />
         )}
       </div>
     </div>

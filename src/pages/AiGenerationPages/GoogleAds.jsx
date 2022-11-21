@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import '../Pages.css';
 import loadingCube from '../../images/klevvvers-cube.png';
-import googleIcon from '../../images/title-icons/google-icon.png'
+import googleIcon from '../../images/title-icons/google-icon.png';
 
 export default function GoogleAds() {
   const [userPrompt, setUserPrompt] = useState('');
@@ -31,11 +31,11 @@ export default function GoogleAds() {
 
     const openai = new OpenAIApi(configuration);
 
-    const response = await openai
+    await openai
       .createCompletion({
         model: 'text-davinci-002',
         prompt: `Write a google ad for ${userPrompt}`,
-        
+
         temperature: temp,
         max_tokens: 256,
         top_p: 1,
@@ -54,11 +54,7 @@ export default function GoogleAds() {
   return (
     <div className='productDiv'>
       <div className='infoArea'>
-      <img
-          src={googleIcon}
-          alt='google icon'
-          className='titleIcons'
-        />
+        <img src={googleIcon} alt='google icon' className='titleIcons' />
         <h1>Generate Google Ads</h1>
         <p>
           Genereate Google Ads for any type of product, simply enter the name
@@ -99,7 +95,7 @@ export default function GoogleAds() {
             <span className='aiResponse'>{aiResponse}</span>
           </>
         ) : (
-          <img src={loadingCube} className='loading' />
+          <img src={loadingCube} alt='loading' className='loading' />
         )}
       </div>
     </div>

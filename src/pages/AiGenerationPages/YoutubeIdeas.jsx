@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import '../Pages.css';
 import loadingCube from '../../images/klevvvers-cube.png';
-import facebookIcon from '../../images/title-icons/facebook-icon.png'
-export default function FacebookAdsPage() {
+import youtubeIcon from '../../images/title-icons/youtube-icon.png';
+
+export default function YoutubeIdeas() {
   const [userPrompt, setUserPrompt] = useState('');
+  const [selection, setSelection] = useState('gTitle');
+  console.log(selection);
 
   const [responseTitle, setResponseTitle] = useState(
     'The response from AI will be shown below:'
@@ -33,7 +36,7 @@ export default function FacebookAdsPage() {
     await openai
       .createCompletion({
         model: 'text-davinci-002',
-        prompt: `Write a facebook ad for ${userPrompt}`,
+        prompt: userPrompt,
         temperature: temp,
         max_tokens: 256,
         top_p: 1,
@@ -41,36 +44,69 @@ export default function FacebookAdsPage() {
         presence_penalty: 0,
       })
       .then((response) => {
-        setResponseTitle(
-          `AI Facebook ads suggestions for: ${userPrompt}`
-        );
+        setResponseTitle(`AI Google ads suggestions for: ${userPrompt}`);
         setAiResponse(response.data.choices[0].text);
       });
 
     // OPEN AI-END
     setLoading(false);
   };
-
   return (
     <div className='productDiv'>
       <div className='infoArea'>
-      <img
-          src={facebookIcon}
-          alt='facebook icon'
-          className='titleIcons'
-        />
-        <h1>Generate Facebook Ads</h1>
-        <p>
-          Genereate Facebook Ads for any type of product, simply enter
-          the name and product description to get started.
-        </p>
+        <img src={youtubeIcon} alt='youtube icon' className='titleIcons' />
+        <h1>Generate Youtube Ideas</h1>
+        <p>Genereate Youtube titles, thumbnails and video ideas.</p>
       </div>
       <hr className='blogPageHr' />
+
       <div className='inputArea'>
         <label>
-          What Product Would You like to get a Facebook Ad for?
-          <input type='text' onChange={(e) => setUserPrompt(e.target.value)} />
+          <select
+            name='selection'
+            defaultValue='gTitle'
+            onChange={(e) => {
+              setSelection(e.target.value);
+            }}
+          >
+            <option value='gTitle'>Generate Title</option>
+            <option value='gTopic'>Generate Video Topics</option>
+            <option value='gThumbnail'>Generate Thumbnail</option>
+          </select>
         </label>
+        {selection === 'gTitle' ? (
+          <label>
+            Generate Youtube video titles based on this idea:
+            <input
+              type='text'
+              onChange={(e) =>
+                setUserPrompt(
+                  `Generate five Youtube Titles based on this idea: ${e.target.value}`
+                )
+              }
+            />
+          </label>
+        ) : selection === 'gTopic' ? (
+          <label>
+            Generate Youtube video topics based on this sentence:
+            <input
+              type='text'
+              onChange={(e) =>
+                setUserPrompt(
+                  `Generate five Youtube video content topics based on this sentence: ${e.target.value}`
+                )
+              }
+            />
+          </label>
+        ) : (
+          <label>
+            Generate Youtube video thumbnails based on this sentence:
+            <input
+              type='text'
+              onChange={(e) => setUserPrompt(e.target.value)}
+            />
+          </label>
+        )}
 
         <div className='rangeSlider'>
           <div className='rangeInfo'>

@@ -20,6 +20,15 @@
 
 /* FORM AREA */
 
+.selectionButtons {
+  width: 90%;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
 .inputArea {
   display: flex;
   flex-direction: column;

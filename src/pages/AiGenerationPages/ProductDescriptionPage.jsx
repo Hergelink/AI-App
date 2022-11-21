@@ -31,7 +31,7 @@ export default function ProductDescriptionPage() {
 
     const openai = new OpenAIApi(configuration);
 
-    const response = await openai
+    await openai
       .createCompletion({
         model: 'text-davinci-002',
         prompt: `Write a detailed, smart, informative and professional product description for ${userPrompt}`,
@@ -103,7 +103,7 @@ export default function ProductDescriptionPage() {
             <span className='aiResponse'>{aiResponse}</span>
           </>
         ) : (
-          <img src={loadingCube} className='loading' />
+          <img src={loadingCube} alt='loading' className='loading' />
         )}
       </div>
     </div>

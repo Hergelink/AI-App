@@ -58,6 +58,10 @@ export default function Header() {
                     <li>
                       <Link to='javascript-helper'>JavaScript Helper</Link>
                     </li>
+
+                    <li>
+                      <Link to='youtube-ideas'>Youtube Ideas</Link>
+                    </li>
                   </ul>
                 </div>
               ) : (
@@ -96,6 +100,10 @@ export default function Header() {
               <hr />
               <Link to='/google-ads' onClick={handleClick}>
                 Google Ads
+              </Link>
+              <hr />
+              <Link to='/youtube-ideas' onClick={handleClick}>
+                Youtube Ideas
               </Link>
               <hr />
               <div className='categoryDiv'>

@@ -6,6 +6,7 @@ import LandingPage from '../pages/LandingPage/LandingPage'
 import ProductDescription from '../pages/AiGenerationPages/ProductDescriptionPage'
 import GrammarCorrectionPage from '../pages/AiGenerationPages/GrammarCorrectionPage';
 import JavaScriptHelperPage from '../pages/AiGenerationPages/JavaScriptHelperPage';
+import YoutubeIdeas from '../pages/AiGenerationPages/YoutubeIdeas';
 
 export default function Main() {
   return (
@@ -17,6 +18,7 @@ export default function Main() {
         <Route path='/google-ads' element={<GoogleAds />} />
         <Route path='/grammar-correction' element={<GrammarCorrectionPage />} />
         <Route path='/javascript-helper' element={<JavaScriptHelperPage />} />
+        <Route path='/youtube-ideas' element={<YoutubeIdeas />} />
       </Routes>
     </main>
   )
