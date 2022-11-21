@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import '../Pages.css';
 import loadingCube from '../../images/klevvvers-cube.png';
-import descriptionIcon from '../../images/title-icons/description-icon.png'
+import descriptionIcon from '../../images/title-icons/description-icon.png';
+
 export default function ProductDescriptionPage() {
   const [userPrompt, setUserPrompt] = useState('');
 
@@ -11,8 +12,7 @@ export default function ProductDescriptionPage() {
   );
 
   const [temp, setTemp] = useState(1);
-  // console.log(typeof(temp))
-  // console.log(temp)
+
   const [aiResponse, setAiResponse] = useState('...await the response');
 
   const [loading, setLoading] = useState(false);
@@ -35,8 +35,8 @@ export default function ProductDescriptionPage() {
       .createCompletion({
         model: 'text-davinci-002',
         prompt: `Write a detailed, smart, informative and professional product description for ${userPrompt}`,
-        temperature: 1,
-        // temperature: { temp },
+        // temperature: 1,
+        temperature: temp,
         max_tokens: 200,
         // max_tokens: 30,
         top_p: 1,
@@ -57,7 +57,7 @@ export default function ProductDescriptionPage() {
   return (
     <div className='productDiv'>
       <div className='infoArea'>
-      <img
+        <img
           src={descriptionIcon}
           alt='description icon'
           className='titleIcons'
@@ -87,14 +87,11 @@ export default function ProductDescriptionPage() {
             max={1}
             step={0.01}
             value={temp}
-            onChange={(e) => {
-              const val = e.target.value * 1;
-
-              setTemp(val);
-            }}
+            onChange={(e) => setTemp(e.target.value * 1)}
             className='slider'
           />
         </div>
+
         <button onClick={handleSubmit}>Generate description</button>
       </div>
       <hr className='blogPageHr' />

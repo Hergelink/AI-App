@@ -35,10 +35,9 @@ export default function GoogleAds() {
       .createCompletion({
         model: 'text-davinci-002',
         prompt: `Write a google ad for ${userPrompt}`,
-        temperature: 1,
-        // temperature: { temp },
-        max_tokens: 200,
-        // max_tokens: 30,
+        
+        temperature: temp,
+        max_tokens: 256,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
@@ -85,11 +84,7 @@ export default function GoogleAds() {
             max={1}
             step={0.01}
             value={temp}
-            onChange={(e) => {
-              const val = e.target.value * 1;
-
-              setTemp(val);
-            }}
+            onChange={(e) => setTemp(e.target.value * 1)}
             className='slider'
           />
         </div>

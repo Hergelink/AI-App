@@ -11,9 +11,6 @@ export default function JavaScriptHelperPage() {
     'The response from AI will be shown below:'
   );
 
-  const [temp, setTemp] = useState(1);
-  // console.log(typeof(temp))
-  // console.log(temp)
   const [aiResponse, setAiResponse] = useState('...await the response');
 
   const [loading, setLoading] = useState(false);
@@ -37,9 +34,7 @@ export default function JavaScriptHelperPage() {
         model: 'text-davinci-002',
         prompt: `Show me how can i achive ${userPrompt} with javascript`,
         temperature: 0,
-        // temperature: { temp },
-        max_tokens: 60,
-        // max_tokens: 30,
+        max_tokens: 256,
         top_p: 1,
         frequency_penalty: 0.5,
         presence_penalty: 0,

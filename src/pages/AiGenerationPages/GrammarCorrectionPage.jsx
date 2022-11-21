@@ -10,9 +10,6 @@ export default function GrammarCorrectionPage() {
     'The response from AI will be shown below:'
   );
 
-  const [temp, setTemp] = useState(1);
-  // console.log(typeof(temp))
-  // console.log(temp)
   const [aiResponse, setAiResponse] = useState('...await the response');
 
   const [loading, setLoading] = useState(false);
@@ -36,17 +33,13 @@ export default function GrammarCorrectionPage() {
         model: 'text-davinci-002',
         prompt: `Correct this to standard English: ${userPrompt}`,
         temperature: 0,
-        // temperature: { temp },
-        max_tokens: 200,
-        // max_tokens: 30,
+        max_tokens: 256,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
       })
       .then((response) => {
-        setResponseTitle(
-          `AI Grammar Correction for: ${userPrompt}`
-        );
+        setResponseTitle(`AI Grammar Correction for: ${userPrompt}`);
         setAiResponse(response.data.choices[0].text);
       });
 
@@ -57,20 +50,23 @@ export default function GrammarCorrectionPage() {
     <div className='productDiv'>
       <div className='infoArea'>
         <h1>Grammar Correction</h1>
-        <p>
-          Correct sentences into standard English.
-        </p>
+        <p>Correct sentences or paragraphs into standard English.</p>
       </div>
       <hr className='blogPageHr' />
+
       <div className='inputArea'>
         <label>
-          Enter your sentence below to be corrected
-          <input type='text' onChange={(e) => setUserPrompt(e.target.value)} />
+          Enter your text below to be corrected
+          <textarea
+            className='grammarTextArea'
+            rows={4}
+            onChange={(e) => setUserPrompt(e.target.value)}
+          />
         </label>
 
-       
         <button onClick={handleSubmit}>Correct Grammar</button>
       </div>
+
       <hr className='blogPageHr' />
       <div className='responseDiv'>
         {!loading ? (

@@ -1,11 +1,10 @@
 /* TITLE AREA */
 
 .infoArea {
-    width: 90%;
-    margin-inline: auto;
-    margin-bottom: 1rem;
-} 
-
+  width: 90%;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+}
 
 .titleIcons {
   width: 34px;
@@ -13,37 +12,43 @@
 }
 
 .blogPageHr {
-    width: 90%;
-    margin-inline: auto;
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
+  width: 90%;
+  margin-inline: auto;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
 }
-
 
 /* FORM AREA */
 
 .inputArea {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-inline: auto;
 }
 
-
-
 label {
-    width: 90%;
+  width: 100%;
 }
 
 input {
-    width: 100%;
-    height: 40px;
-    margin-top: 0.4rem;
-    border-radius: 10px;
-    padding: 8px;
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+  width: 100%;
+  height: 40px;
+  margin-top: 0.4rem;
+  border-radius: 10px;
+  padding: 8px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.grammarTextArea {
+  width: 100%;
+  /* min-height: 200px; */
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 8px;
+  resize: vertical;
 }
 
 .rangeSlider {
@@ -68,38 +73,38 @@ input {
 }
 
 button {
-    width: 150px;
-    height: 40px;
-    margin-top: 0.5rem;
-    background-color: black;
-    color: white;
-    font-weight: 400;
-    border: 0;
-    border-radius: 10px;
-    cursor: pointer;
+  width: 150px;
+  height: 40px;
+  margin-top: 0.5rem;
+  background-color: black;
+  color: white;
+  font-weight: 400;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: rgb(46, 46, 46);
+  background-color: rgb(46, 46, 46);
 }
 
 /* AI RESPONSE AREA */
 
 .responseDiv {
-    margin-top:2rem;
-    width: 90%;
-    height: 300px;
-    margin-inline: auto;
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 8px;
+  margin-top: 2rem;
+  width: 90%;
+  min-height: 300px;
+  margin-inline: auto;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 8px;
 }
 
 .responseDiv span {
-    display: block;
-    margin-bottom: 0.7rem; 
+  display: block;
+  margin-bottom: 0.7rem;
 }
 
 .responseDiv hr {
@@ -108,21 +113,19 @@ button:hover {
 }
 
 .aiResponseTitle {
-    width: 100%;
+  width: 100%;
 }
 
 .aiResponse {
-    width: 100%;
-    min-height: 200px;
+  width: 100%;
+  min-height: 200px;
 }
 
 @media (min-width: 768px) {
- 
   label {
     width: 100%;
   }
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
   .loading {
