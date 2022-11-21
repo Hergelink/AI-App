@@ -14,7 +14,7 @@ export default function LandingPage() {
   return (
     <div className='productDiv'>
       <div className='informationContainer'>
-        <h1>Generate text content on demand with the help of AI</h1>
+        <h1>Generate text content on demand with the help of GPT-3</h1>
         <h4>
           AI powered software that generates ad copy, product descriptions,
           sales copy, blog paragraphs, video scripts more.
