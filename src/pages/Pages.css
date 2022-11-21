@@ -20,14 +20,20 @@
 
 /* FORM AREA */
 
-.selectionButtons {
+.selectionLabel {
   width: 90%;
   margin-inline: auto;
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
+  display: block;
 }
+
+.selectionBar {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 8px;
+}
+
 
 .inputArea {
   display: flex;
@@ -58,6 +64,30 @@ input {
   border: 1px solid black;
   border-radius: 8px;
   resize: vertical;
+}
+
+/* DALLE AREA */
+
+.thumbnailTextArea {
+  border-radius: 8px;
+  padding: 8px;
+  color: black;
+  background-color: white;
+}
+
+.loadingTextInfo {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.resultImage {
+  border: 1px solid ;
+  animation: Border 20s infinite alternate;
+  border-radius: 3px;
+  display: block;
+  margin-inline: auto;
+  margin-top: 2rem;
+  width: 90%;
 }
 
 .rangeSlider {
@@ -153,5 +183,26 @@ button:hover {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes Border {
+  0% {
+    border-color: #cb1b16;
+  }
+  20% {
+    border-color: #ef3c2d;
+  }
+  40% {
+    border-color: #f26a4f;
+  }
+  60% {
+    border-color: #f29479;
+  }
+  80% {
+    border-color: #9dcee2;
+  }
+  100% {
+    border-color: #4091c9;
   }
 }
