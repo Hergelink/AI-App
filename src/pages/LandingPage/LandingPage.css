@@ -63,12 +63,13 @@ h4 {
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
     rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
   border-radius: 3px;
-  height: 130px;
+  height: 150px;
   padding: 8px;
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .featureItem:hover {
@@ -76,6 +77,12 @@ h4 {
   border: 1px solid black;
 }
 .featureItemContext {
+  background-color: transparent;
+}
+
+.featureItemContext img {
+  width: 32px;
+  height: 32px;
   background-color: transparent;
 }
 
