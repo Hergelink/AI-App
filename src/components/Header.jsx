@@ -38,7 +38,7 @@ export default function Header() {
           </div>
           <div className='desktopMenu'>
             <Link to='/' className='homeBtn' onClick={scrollToTop}>
-              <h3>Home</h3>
+              Home
             </Link>
 
             <div
@@ -46,7 +46,7 @@ export default function Header() {
               onMouseEnter={() => setDesktopMenuOpen(true)}
               onMouseLeave={() => setDesktopMenuOpen(false)}
             >
-              <h3>Categories</h3>
+              Categories
 
               {desktopMenuOpen ? (
                 <div className='categoryMenuOpen'>
@@ -105,11 +105,13 @@ export default function Header() {
               )}
             </div>
             <Link to='/contact' className='homeBtn' onClick={scrollToTop}>
-              <h3>Contact</h3>
+              Contact
             </Link>
-            <p className='LoginBtn'>login</p>
+            
           </div>
+          
         </div>
+        <p className='LoginBtn'>login</p>
         {menuOpen ? (
           <div className='mobileModal'>
             <Link to='/' className='modalLogoDiv' onClick={handleClick}>

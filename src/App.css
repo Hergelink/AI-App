@@ -207,6 +207,11 @@ footer h4 {
 
   .desktopMenu {
     display: flex;
+    gap: 10px;
+  }
+
+  .desktopMenu a:hover {
+    text-decoration: underline;
   }
 
   .homeBtn {
