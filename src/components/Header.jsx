@@ -4,6 +4,7 @@ import logo from '../images/klevvvers-logo.png';
 import productIcon from '../images/header-icons/product-icon.png';
 import languageIcon from '../images/header-icons/language-icon.png';
 import codeIcon from '../images/header-icons/code-icon.png';
+import contactIcon from '../images/header-icons/contact-icon.png';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,6 +40,7 @@ export default function Header() {
             <Link to='/' className='homeBtn' onClick={scrollToTop}>
               <h3>Home</h3>
             </Link>
+
             <div
               className='categoryMenu'
               onMouseEnter={() => setDesktopMenuOpen(true)}
@@ -84,12 +86,27 @@ export default function Header() {
                         Youtube Ideas
                       </Link>
                     </li>
+
+                    <li>
+                      <Link to='generate-summary' onClick={scrollToTop}>
+                        Generate Summary
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link to='time-complexity' onClick={scrollToTop}>
+                        Time Complexity
+                      </Link>
+                    </li>
                   </ul>
                 </div>
               ) : (
                 <></>
               )}
             </div>
+            <Link to='/contact' className='homeBtn' onClick={scrollToTop}>
+              Contact
+            </Link>
             <p className='LoginBtn'>login</p>
           </div>
         </div>
@@ -159,6 +176,14 @@ export default function Header() {
               </Link>
               <hr />
             </div>
+            <Link to='/contact' id='contactLink' onClick={handleClick}>
+              <img
+                src={contactIcon}
+                alt='contact icon'
+                className='categoryIcons'
+              />
+              Contact
+            </Link>
           </div>
         ) : (
           <></>

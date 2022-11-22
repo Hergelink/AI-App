@@ -9,12 +9,14 @@ import JavaScriptHelperPage from '../pages/AiGenerationPages/JavaScriptHelperPag
 import YoutubeIdeas from '../pages/AiGenerationPages/YoutubeIdeas';
 import TimeComplexity from '../pages/AiGenerationPages/TimeComplexity';
 import Summary from '../pages/AiGenerationPages/Summary';
+import ContactPage from '../pages/ContactPage/ContactPage';
 
 export default function Main() {
   return (
     <main>
       <Routes>
         <Route path='/' element={<LandingPage />} />
+        <Route path='/contact' element={<ContactPage />} />
         <Route path='/product-description' element={<ProductDescription />} />
         <Route path='/facebook-ads' element={<FacebookAdsPage />} />
         <Route path='/google-ads' element={<GoogleAds />} />

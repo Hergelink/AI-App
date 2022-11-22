@@ -1,0 +1,130 @@
+#form-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  width: 85%;
+}
+
+.form-container-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 3rem;
+}
+
+#contact-info-div h1 {
+  font-size: 2.8rem;
+}
+
+#contact-info-div p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+#link-to-faq {
+  text-decoration: underline;
+  font-style: bold;
+  display: inline;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+form {
+  width: 100%;
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input {
+  height: 40px;
+  font-size: 1.1rem;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.295);
+  border: 1px solid rgba(0, 0, 0, 0.269);
+  border-radius: 8px;
+
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.469);
+}
+
+textarea {
+  font-size: 1.1rem;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.295);
+  border: 1px solid rgba(0, 0, 0, 0.269);
+  border-radius: 8px;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.469);
+}
+
+#contactSubmitBtn {
+  margin-top: 2rem;
+  margin-inline: auto;
+  display: block;
+  width: 50%;
+  height: 40px;
+
+  font-size: 1.1rem;
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  color: black;
+  background-color: white;
+}
+
+#contactSubmitBtn:hover {
+  color: white;
+  background-color: black;
+}
+
+@media only screen and (min-width: 730px) {
+  #form-page-container {
+    min-height: 85vh;
+  }
+
+  .form-container-div {
+    max-width: 900px;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  #contact-info-div {
+    margin-top: 1rem;
+    padding-right: 30px;
+  }
+
+  form {
+    margin-top: 1rem;
+    width: 70%;
+  }
+
+  form button:hover {
+    border: 2px solid rgba(0, 0, 0, 0.469);
+    color: rgb(27, 27, 27);
+    background-color: rgba(131, 58, 180, 0.116);
+  }
+}

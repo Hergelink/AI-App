@@ -27,8 +27,8 @@ export default function LandingPage() {
         <div className='heroTextContainer'>
           <h1>Generate text content on demand with the help of GPT-3</h1>
           <h4>
-            AI powered software that generates ad copy, product descriptions,
-            sales copy, blog paragraphs, video scripts more.
+            AI powered software that generates ad copies, product descriptions,
+            sales copies, blog paragraphs, video scripts more.
           </h4>
         </div>
         <div className='coverImageContainer'>
