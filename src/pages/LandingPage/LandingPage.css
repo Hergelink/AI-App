@@ -53,6 +53,7 @@ h4 {
 
 .featureItem {
   text-align: left;
+  text-decoration: none;
   background-color: white;
   color: white;
   border: 1px solid black;
@@ -75,6 +76,7 @@ h4 {
 .featureItemContext {
   background-color: transparent;
 }
+
 
 .featureItemContext img {
   width: 32px;

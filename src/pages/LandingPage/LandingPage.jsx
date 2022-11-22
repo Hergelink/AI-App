@@ -13,6 +13,14 @@ import timeIcon from '../../images/title-icons/time-icon.png';
 import youtubeIcon from '../../images/title-icons/youtube-icon.png';
 
 export default function LandingPage() {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+  });
+  }
+
   return (
     <div className='informationContainer'>
       <div className='heroContainer'>
@@ -38,7 +46,7 @@ export default function LandingPage() {
       </div>
 
       <div className='featuresDiv'>
-        <Link to='/product-description' className='featureItem'>
+        <Link to='/product-description' className='featureItem' onClick={scrollToTop} >
           <div className='featureItemContext'>
             <img src={productIcon} alt='product icon' />
             <h3>Product description generator</h3>
@@ -46,7 +54,7 @@ export default function LandingPage() {
           </div>
         </Link>
 
-        <Link to='/facebook-ads' className='featureItem'>
+        <Link to='/facebook-ads' className='featureItem' onClick={scrollToTop}>
           <div className='featureItemContext'>
             <img src={facebookIcon} alt='facebook icon' />
             <h3>Facebook Ads generator</h3>
@@ -54,7 +62,7 @@ export default function LandingPage() {
           </div>
         </Link>
 
-        <Link to='/product-description' className='featureItem'>
+        <Link to='/product-description' className='featureItem' onClick={scrollToTop}>
           <div className='featureItemContext'>
             <img src={googleIcon} alt='google icon' />
             <h3>Google Ads generator</h3>
@@ -62,7 +70,7 @@ export default function LandingPage() {
           </div>
         </Link>
 
-        <Link to='/youtube-ideas' className='featureItem'>
+        <Link to='/youtube-ideas' className='featureItem' onClick={scrollToTop}>
           <div className='featureItemContext'>
             <img src={youtubeIcon} alt='youtube icon' />
             <h3>Youtube Idea generator</h3>
@@ -70,7 +78,7 @@ export default function LandingPage() {
           </div>
         </Link>
 
-        <Link className='featureItem' to='/grammar-correction'>
+        <Link className='featureItem' to='/grammar-correction' onClick={scrollToTop}>
           <div className='featureItemContext'>
             <img src={languageIcon} alt='language icon' />
             <h3>Grammar Correction</h3>
@@ -81,7 +89,7 @@ export default function LandingPage() {
           </div>
         </Link>
 
-        <Link className='featureItem' to='/generate-summary'>
+        <Link className='featureItem' to='/generate-summary' onClick={scrollToTop}>
           <div className='featureItemContext'>
             <img src={summaryIcon} alt='summary icon' />
             <h3>Generate Summary</h3>
@@ -89,7 +97,7 @@ export default function LandingPage() {
           </div>
         </Link>
 
-        <Link className='featureItem' to='/javascript-helper'>
+        <Link className='featureItem' to='/javascript-helper' onClick={scrollToTop}>
           <div className='featureItemContext'>
             <img src={javascriptIcon} alt='javascript icon' />
             <h3>JavaScript helper</h3>
@@ -97,7 +105,7 @@ export default function LandingPage() {
           </div>
         </Link>
 
-        <Link className='featureItem' to='/time-complexity'>
+        <Link className='featureItem' to='/time-complexity' onClick={scrollToTop}>
           <div className='featureItemContext'>
             <img src={timeIcon} alt='time icon' />
             <h3>Time Complexity Calculator</h3>

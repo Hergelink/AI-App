@@ -11,12 +11,22 @@ export default function Header() {
 
   const handleClick = () => {
     setMenuOpen((e) => !e);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   };
 
   return (
     <header>
       <div className='headerContainer'>
-        <Link to='/' className='logocontainer'>
+        <Link to='/' className='logocontainer' onClick={scrollToTop}>
           <img src={logo} alt='klevvvers logo' />
         </Link>
         <div className='navDiv'>
@@ -26,7 +36,7 @@ export default function Header() {
             <span></span>
           </div>
           <div className='desktopMenu'>
-            <Link to='/' className='homeBtn'>
+            <Link to='/' className='homeBtn' onClick={scrollToTop}>
               <h3>Home</h3>
             </Link>
             <div
@@ -40,27 +50,39 @@ export default function Header() {
                 <div className='categoryMenuOpen'>
                   <ul className='categoryItems'>
                     <li>
-                      <Link to='product-description'>Product Description</Link>
+                      <Link to='product-description' onClick={scrollToTop}>
+                        Product Description
+                      </Link>
                     </li>
 
                     <li>
-                      <Link to='facebook-ads'>Facebook Ads</Link>
+                      <Link to='facebook-ads' onClick={scrollToTop}>
+                        Facebook Ads
+                      </Link>
                     </li>
 
                     <li>
-                      <Link to='google-ads'>Google Ads</Link>
+                      <Link to='google-ads' onClick={scrollToTop}>
+                        Google Ads
+                      </Link>
                     </li>
 
                     <li>
-                      <Link to='grammar-correction'>Grammar Correction</Link>
+                      <Link to='grammar-correction' onClick={scrollToTop}>
+                        Grammar Correction
+                      </Link>
                     </li>
 
                     <li>
-                      <Link to='javascript-helper'>JavaScript Helper</Link>
+                      <Link to='javascript-helper' onClick={scrollToTop}>
+                        JavaScript Helper
+                      </Link>
                     </li>
 
                     <li>
-                      <Link to='youtube-ideas'>Youtube Ideas</Link>
+                      <Link to='youtube-ideas' onClick={scrollToTop}>
+                        Youtube Ideas
+                      </Link>
                     </li>
                   </ul>
                 </div>
