@@ -24,6 +24,16 @@
   font-size: 1.2rem;
 }
 
+#gpt3 {
+    width: 40px;
+    height: 25px;
+    border-radius: 3px;
+}
+
+#gpt3:hover {
+    text-decoration: underline;
+}
+
 #link-to-faq {
   text-decoration: underline;
   font-style: bold;
@@ -37,6 +47,11 @@ form {
   text-align: left;
   margin-top: 1rem;
   margin-bottom: 4rem;
+}
+
+#davinciDiv {
+    width: 110%;
+    margin-top: 2rem;
 }
 
 .form-inputs {
