@@ -215,6 +215,7 @@ footer h4 {
   }
 
   .categoryMenu {
+    margin-right: 0.4rem;
     cursor: pointer;
     position: relative;
   }

@@ -22,7 +22,7 @@ export default function ContactPage() {
             better yet contact
             <button id='gpt3' onClick={handleGPT}>
               GPT-3
-            </button>
+            </button> 
           </p>
           <p>
             Visit the

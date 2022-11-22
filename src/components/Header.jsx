@@ -105,7 +105,7 @@ export default function Header() {
               )}
             </div>
             <Link to='/contact' className='homeBtn' onClick={scrollToTop}>
-              Contact
+              <h3>Contact</h3>
             </Link>
             <p className='LoginBtn'>login</p>
           </div>
