@@ -192,7 +192,7 @@ footer h4 {
   .headerContainer {
     width: 95%;
     max-width: 1000px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.137);
   }
 
   .hamburgerDiv {
