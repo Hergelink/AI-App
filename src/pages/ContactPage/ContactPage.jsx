@@ -9,7 +9,7 @@ export default function ContactPage() {
   const [ai, setAi] = useState(false);
 
   const handleGPT = () => {
-    setAi(e => !e)
+    setAi((e) => !e);
   };
 
   return (
@@ -19,7 +19,11 @@ export default function ContactPage() {
           <h1>Contact us. 🦜</h1>
           <p>
             Feel free to contact us for your questions or recommendations. Or
-            better yet contact <button id='gpt3' onClick={handleGPT}>GPT-3</button></p>
+            better yet contact
+            <button id='gpt3' onClick={handleGPT}>
+              GPT-3
+            </button>
+          </p>
           <p>
             Visit the
             <Link to='/' id='link-to-faq'>
@@ -28,8 +32,16 @@ export default function ContactPage() {
             page for frequently asked questions.
           </p>
         </div>
-        {!ai ? <Forms /> : <><Davinci /><button onClick={handleGPT}>Contact Form</button></>}
-        
+        {!ai ? (
+          <Forms />
+        ) : (
+          <div id='davinciContainer'>
+            <Davinci />
+            <button id='bringBackButton' onClick={handleGPT}>
+              Bring me back to the Contact Form
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -27,7 +27,6 @@ export default function Davinci() {
       .createCompletion({
         model: 'text-davinci-002',
         prompt: `Answer this as gpt-3: ${userPrompt}`,
-
         temperature: 1,
         max_tokens: 256,
         top_p: 1,
