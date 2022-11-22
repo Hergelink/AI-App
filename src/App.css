@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-
+:root {
+  --blue: rgba(10, 105, 178, 255);
+  --red: rgba(234, 41, 78, 255);
+  --orange: rgba(234, 41, 78, 255);
+  --green: rgba(21, 183, 117, 255);
+}
 
 * {
   margin: 0;
@@ -34,8 +39,8 @@ header {
   justify-content: flex-start;
   align-items: center;
 
-  height: 6rem;
-
+  height: 2.5rem;
+  width: 200px;
   text-decoration: none;
   cursor: pointer;
 }
@@ -151,20 +156,8 @@ header {
   text-decoration: underline dashed;
 }
 
-.LoginBtn {
-  width: 100px;
-  border: 1px solid rgb(82, 82, 248);
-  background-color: white;
-  color: rgb(82, 82, 248);
-  border-radius: 8px;
-  text-align: center;
-  margin-left: 2rem;
-  cursor: pointer;
-}
-
-.LoginBtn:hover {
-  background-color: rgb(82, 82, 248);
-  color: white;
+.accountButtons {
+  display: none;
 }
 
 /* MAIN AREA */
@@ -199,6 +192,7 @@ footer h4 {
   .headerContainer {
     width: 95%;
     max-width: 1000px;
+    border-bottom: 1px solid black;
   }
 
   .hamburgerDiv {
@@ -210,17 +204,60 @@ footer h4 {
     gap: 10px;
   }
 
+  .accountButtons {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .logInBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 25px;
+    border: 1px solid var(--red);
+    background-color: white;
+    color: var(--red);
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .logInBtn:hover {
+    background-color: rgb(255, 134, 134);
+    color: white;
+    border: 0;
+  }
+
+  .signUpBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 25px;
+    border: 1px solid var(--red);
+    background-color: var(--red);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .signUpBtn:hover {
+    background-color: white;
+    color: var(--red);
+  }
+
   .desktopMenu a:hover {
     text-decoration: underline;
   }
 
   .homeBtn {
-    margin-right: 0.4rem;
     text-decoration: none;
   }
 
   .categoryMenu {
-    margin-right: 0.4rem;
     cursor: pointer;
     position: relative;
   }

@@ -39,7 +39,7 @@ export default function LandingPage() {
       <hr className='landingPageHr' />
 
       <div className='thirdInfoDiv'>
-        <h3>Automatically generate unique and human-like copy in seconds.</h3>
+        <h3>Automatically generate unique and human-like copy in <span id='secondsText'>seconds.</span></h3>
         <p>
           Built on top of the world’s most advanced AI language model GPT-3.
         </p>

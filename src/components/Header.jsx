@@ -47,7 +47,6 @@ export default function Header() {
               onMouseLeave={() => setDesktopMenuOpen(false)}
             >
               Categories
-
               {desktopMenuOpen ? (
                 <div className='categoryMenuOpen'>
                   <ul className='categoryItems'>
@@ -107,11 +106,13 @@ export default function Header() {
             <Link to='/contact' className='homeBtn' onClick={scrollToTop}>
               Contact
             </Link>
-            
           </div>
-          
         </div>
-        <p className='LoginBtn'>login</p>
+        <div className='accountButtons'>
+          <p className='logInBtn'>Log In</p>
+          <p className='signUpBtn'>Sign Up</p>
+        </div>
+
         {menuOpen ? (
           <div className='mobileModal'>
             <Link to='/' className='modalLogoDiv' onClick={handleClick}>
