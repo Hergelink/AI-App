@@ -119,6 +119,10 @@ export default function Header() {
                 Grammar Correction
               </Link>
               <hr />
+              <Link to='/generate-summary' onClick={handleClick}>
+                Generate Summary
+              </Link>
+              <hr />
               <div className='categoryDiv'>
                 <img src={codeIcon} className='categoryIcons' alt='code icon' />
                 <p>Code</p>
@@ -126,6 +130,10 @@ export default function Header() {
 
               <Link to='/javascript-helper' onClick={handleClick}>
                 JavaScript Helper
+              </Link>
+              <hr />
+              <Link to='/time-complexity' onClick={handleClick}>
+                Calculate Time Complexity
               </Link>
               <hr />
             </div>

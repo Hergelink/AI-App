@@ -7,6 +7,8 @@ import ProductDescription from '../pages/AiGenerationPages/ProductDescriptionPag
 import GrammarCorrectionPage from '../pages/AiGenerationPages/GrammarCorrectionPage';
 import JavaScriptHelperPage from '../pages/AiGenerationPages/JavaScriptHelperPage';
 import YoutubeIdeas from '../pages/AiGenerationPages/YoutubeIdeas';
+import TimeComplexity from '../pages/AiGenerationPages/TimeComplexity';
+import Summary from '../pages/AiGenerationPages/Summary';
 
 export default function Main() {
   return (
@@ -17,7 +19,9 @@ export default function Main() {
         <Route path='/facebook-ads' element={<FacebookAdsPage />} />
         <Route path='/google-ads' element={<GoogleAds />} />
         <Route path='/grammar-correction' element={<GrammarCorrectionPage />} />
+        <Route path='/generate-summary' element={<Summary />} />
         <Route path='/javascript-helper' element={<JavaScriptHelperPage />} />
+        <Route path='/time-complexity' element={<TimeComplexity />} />
         <Route path='/youtube-ideas' element={<YoutubeIdeas />} />
       </Routes>
     </main>

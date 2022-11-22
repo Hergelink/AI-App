@@ -1,13 +1,15 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
 import heroImage from '../../images/hero-image.png';
 import productIcon from '../../images/header-icons/product-icon.png';
 import languageIcon from '../../images/header-icons/language-icon.png';
+import summaryIcon from '../../images/title-icons/summary-icon.png'
 import facebookIcon from '../../images/title-icons/facebook-icon.png';
 import googleIcon from '../../images/title-icons/google-icon.png';
 import javascriptIcon from '../../images/title-icons/javascript-icon.png';
+import timeIcon from '../../images/title-icons/time-icon.png'
 import youtubeIcon from '../../images/title-icons/youtube-icon.png';
 
 export default function LandingPage() {
@@ -78,11 +80,29 @@ export default function LandingPage() {
             </div>
           </Link>
 
+          <Link className='featureItem' to='/generate-summary'>
+            <div className='featureItemContext'>
+              <img src={summaryIcon} alt='summary icon' />
+              <h3>Generate Summary</h3>
+              <p>
+               Summarize your long text or paragraphs.
+              </p>
+            </div>
+          </Link>
+
           <Link className='featureItem' to='/javascript-helper'>
             <div className='featureItemContext'>
               <img src={javascriptIcon} alt='javascript icon' />
               <h3>JavaScript helper</h3>
               <p>Let AI help you with your JavaScript problems.</p>
+            </div>
+          </Link>
+
+          <Link className='featureItem' to='/time-complexity'>
+            <div className='featureItemContext'>
+              <img src={timeIcon} alt='time icon' />
+              <h3>Time Complexity Calculator</h3>
+              <p>Let AI help calculate your functions time complexity.</p>
             </div>
           </Link>
         </div>

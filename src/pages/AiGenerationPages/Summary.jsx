@@ -2,14 +2,9 @@ import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import '../Pages.css';
 import loadingCube from '../../images/klevvvers-cube.png';
-import javascriptIcon from '../../images/title-icons/javascript-icon.png';
 
-export default function JavaScriptHelperPage() {
+export default function Summary() {
   const [userPrompt, setUserPrompt] = useState('');
-
-  const [responseTitle, setResponseTitle] = useState(
-    'The response from AI will be shown below:'
-  );
 
   const [aiResponse, setAiResponse] = useState('...await the response');
 
@@ -32,16 +27,14 @@ export default function JavaScriptHelperPage() {
     await openai
       .createCompletion({
         model: 'text-davinci-002',
-        prompt: `You: How do I combine arrays?\nJavaScript chatbot: You can use the concat() method.\nYou:How is the weather today?\nJavaScript chatbot:Sorry, this is not a javascript question.\nYou:${userPrompt}?`,
-        
-        temperature: 0,
-        max_tokens: 256,
+        prompt: `${userPrompt}\n\nTl;dr`,
+        temperature: 0.7,
+        max_tokens: 100,
         top_p: 1,
-        frequency_penalty: 0.5,
+        frequency_penalty: 0,
         presence_penalty: 0,
       })
       .then((response) => {
-        setResponseTitle(`AI JavaScript help suggestion for: ${userPrompt}`);
         setAiResponse(response.data.choices[0].text);
       });
 
@@ -51,33 +44,28 @@ export default function JavaScriptHelperPage() {
   return (
     <div className='productDiv'>
       <div className='infoArea'>
-        <img
-          src={javascriptIcon}
-          alt='javascript icon'
-          className='titleIcons'
-        />
-        <h1>JavaScript Helper</h1>
-
-        <p>
-          Ask javascript related questions and let the AI suggest you the
-          possible actions you can take.
-        </p>
+        <h1>Generate Summary</h1>
+        <p>Generate summaries based on paragraphs</p>
       </div>
       <hr className='blogPageHr' />
+
       <div className='inputArea'>
         <label>
-          Enter your JavaScript questions below:
-          <input type='text' onChange={(e) => setUserPrompt(e.target.value)} />
+          Enter your paragraphs below to be summarized
+          <textarea
+            className='grammarTextArea'
+            rows={30}
+            onChange={(e) => setUserPrompt(e.target.value)}
+          />
         </label>
 
-        <button onClick={handleSubmit}>Ask your Question</button>
+        <button onClick={handleSubmit}>Generate Summary</button>
       </div>
+
       <hr className='blogPageHr' />
       <div className='responseDiv'>
         {!loading ? (
           <>
-            <span className='aiResponseTitle'>{responseTitle}</span>
-            <hr />
             <span className='aiResponse'>{aiResponse}</span>
           </>
         ) : (
