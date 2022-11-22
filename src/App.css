@@ -172,6 +172,11 @@ footer h4 {
 @media (min-width: 768px) {
   /* HEADER AREA */
 
+  .headerContainer {
+    width: 95%;
+    max-width: 1000px;
+  }
+
   .hamburgerDiv {
     display: none;
   }
@@ -234,14 +239,15 @@ footer h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .productDiv {
+    margin-top: 5rem;
+    width: 90%;
     max-width: 800px;
+
   }
 
-  .headerContainer {
-    max-width: 700px;
-  }
+  
 }

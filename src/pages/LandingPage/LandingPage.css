@@ -29,10 +29,6 @@ h4 {
   overflow: hidden;
 }
 
-#trustedP {
-  margin-top: 1rem;
-  font-weight: 700;
-}
 
 .landingPageHr {
   margin-top: 3rem;
@@ -113,6 +109,36 @@ h4 {
   color: white;
 }
 
+@media (min-width: 768px) {
+  .informationContainer {
+    width: 95%;
+    max-width: 1000px;
+    text-align: left;
+  }
+
+  .heroContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .informationContainer h1 {
+    width: 80%;
+  }
+
+  .featuresDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .featureItem {
+    margin: 0;
+  }
+}
+
 @keyframes Border {
   0% {
     border-color: #cb1b16;
@@ -131,16 +157,5 @@ h4 {
   }
   100% {
     border-color: #4091c9;
-  }
-}
-
-@media (min-width: 768px) {
-  .informationContainer {
-    width: 700px;
-    text-align: left;
-  }
-
-  .informationContainer h1 {
-    width: 80%
   }
 }
