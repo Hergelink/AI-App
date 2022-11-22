@@ -48,8 +48,8 @@ export default function Davinci() {
           alt='artificial intelligence icon'
           className='titleIcons'
         />
-        <h1>Hi there 👋</h1>
-        <p>I am Open Ai's GPT-3 model called Davinci.</p>
+        <h1>Hi there,</h1>
+        <p style={{fontSize: '1.1rem'}}>I am Davinci. Created by Open AI and based on GPT-3. </p>
       </div>
       <hr className='blogPageHr' />
       <div className='inputArea'>
