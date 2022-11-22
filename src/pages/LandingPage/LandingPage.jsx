@@ -11,7 +11,7 @@ import googleIcon from '../../images/title-icons/google-icon.png';
 import javascriptIcon from '../../images/title-icons/javascript-icon.png';
 import timeIcon from '../../images/title-icons/time-icon.png';
 import youtubeIcon from '../../images/title-icons/youtube-icon.png';
-
+import plusIcon from '../../images/title-icons/plus-icon.png'
 export default function LandingPage() {
 
   const scrollToTop = () => {
@@ -110,6 +110,14 @@ export default function LandingPage() {
             <img src={timeIcon} alt='time icon' />
             <h3>Time Complexity Calculator</h3>
             <p>Let AI help calculate your functions time complexity.</p>
+          </div>
+        </Link>
+
+        <Link className='featureItem' id='recommend' to='/contact' onClick={scrollToTop}>
+          <div className='featureItemContext'>
+            <img src={plusIcon} alt='plus icon' />
+            <h3>Recommend more features</h3>
+            <p>We realy want to hear your recommendations!</p>
           </div>
         </Link>
       </div>

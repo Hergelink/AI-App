@@ -96,6 +96,21 @@ h4 {
   background-color: transparent;
 }
 
+#recommend {
+  background-color: rgba(65, 105, 225, 0.854);
+}
+
+#recommend:hover {
+  background-color: rgb(65, 105, 225);
+}
+
+#recommend h3 {
+  color: white;
+}
+
+#recommend p {
+  color: white;
+}
 
 @media (min-width: 768px) {
   .informationContainer {
