@@ -12,6 +12,9 @@ import javascriptIcon from '../../images/title-icons/javascript-icon.png';
 import timeIcon from '../../images/title-icons/time-icon.png';
 import youtubeIcon from '../../images/title-icons/youtube-icon.png';
 import plusIcon from '../../images/title-icons/plus-icon.png'
+import chatIcon from '../../images/title-icons/chat-icon.png'
+
+
 export default function LandingPage() {
 
   const scrollToTop = () => {
@@ -95,6 +98,14 @@ export default function LandingPage() {
             <img src={summaryIcon} alt='summary icon' />
             <h3>Generate Summary</h3>
             <p>Summarize your long text or paragraphs.</p>
+          </div>
+        </Link>
+
+        <Link className='featureItem' to='/chat' onClick={scrollToTop}>
+          <div className='featureItemContext'>
+            <img src={chatIcon} alt='summary icon' />
+            <h3>Chat with AI</h3>
+            <p>Start a conversation with the most capable neural network.</p>
           </div>
         </Link>
 

@@ -2,16 +2,10 @@ import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import '../Pages.css';
 import loadingCube from '../../images/klevvvers-cube.png';
-import facebookIcon from '../../images/title-icons/facebook-icon.png'
+import chatIcon from '../../images/title-icons/chat-icon.png';
 
-export default function FacebookAdsPage() {
-  const [userPrompt, setUserPrompt] = useState('');
-
-  const [responseTitle, setResponseTitle] = useState(
-    'The response from AI will be shown below:'
-  );
-
-  const [temp, setTemp] = useState(1);
+export default function Chat() {
+  const [userPrompt, setUserPrompt] = useState();
 
   const [aiResponse, setAiResponse] = useState('...await the response');
 
@@ -34,69 +28,44 @@ export default function FacebookAdsPage() {
     await openai
       .createCompletion({
         model: 'text-davinci-002',
-        prompt: `Write a facebook ad for ${userPrompt}`,
-        temperature: temp,
-        max_tokens: 256,
+        prompt: `The following is a conversation with an AI chatbot. The chatbot is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI chatbot by OpenAI. What do you want to talk about today?\nHuman: ${userPrompt}`,
+        temperature: 0.9,
+        max_tokens: 150,
         top_p: 1,
         frequency_penalty: 0,
-        presence_penalty: 0,
+        presence_penalty: 0.6,
+        stop: [' Human:', ' AI:'],
       })
       .then((response) => {
-        setResponseTitle(
-          `AI Facebook ads suggestions for: ${userPrompt}`
-        );
         setAiResponse(response.data.choices[0].text);
       });
 
     // OPEN AI-END
     setLoading(false);
   };
-
   return (
     <div className='productDiv'>
       <div className='infoArea'>
-      <img
-          src={facebookIcon}
-          alt='facebook icon'
-          className='titleIcons'
-        />
-        <h1>Generate Facebook Ads</h1>
+        <img src={chatIcon} alt='chat icon' className='titleIcons' />
+        <h1>Chat with Ai</h1>
         <p>
-          Genereate Facebook Ads for any type of product, simply enter
-          the name and product description to get started.
+          Chat with Davinci, the most advanced language capable neural network
+          to date.
         </p>
       </div>
       <hr className='blogPageHr' />
       <div className='inputArea'>
         <label>
-          What Product Would You like to get a Facebook Ad for?
+          Enter your text below to start chat
           <input type='text' onChange={(e) => setUserPrompt(e.target.value)} />
         </label>
 
-        <div className='rangeSlider'>
-          <div className='rangeInfo'>
-            <p>Deterministic</p>
-            <p>{temp}</p>
-            <p>Creative</p>
-          </div>
-          <input
-            type='range'
-            min={0}
-            max={1}
-            step={0.01}
-            value={temp}
-            onChange={(e) => setTemp(e.target.value * 1)}
-            className='slider'
-          />
-        </div>
-        <button onClick={handleSubmit}>Generate Ad Text</button>
+        <button onClick={handleSubmit}>Chat</button>
       </div>
       <hr className='blogPageHr' />
       <div className='responseDiv'>
         {!loading ? (
           <>
-            <span className='aiResponseTitle'>{responseTitle}</span>
-            <hr />
             <span className='aiResponse'>{aiResponse}</span>
           </>
         ) : (

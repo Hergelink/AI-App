@@ -75,6 +75,12 @@ export default function Header() {
                     </li>
 
                     <li>
+                      <Link to='chat' onClick={scrollToTop}>
+                        Chat
+                      </Link>
+                    </li>
+
+                    <li>
                       <Link to='javascript-helper' onClick={scrollToTop}>
                         JavaScript Helper
                       </Link>
@@ -163,6 +169,10 @@ export default function Header() {
               <hr />
               <Link to='/generate-summary' onClick={handleClick}>
                 Generate Summary
+              </Link>
+              <hr />
+              <Link to='/chat' onClick={handleClick}>
+                Chat
               </Link>
               <hr />
               <div className='categoryDiv'>

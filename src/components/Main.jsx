@@ -10,6 +10,7 @@ import YoutubeIdeas from '../pages/AiGenerationPages/YoutubeIdeas';
 import TimeComplexity from '../pages/AiGenerationPages/TimeComplexity';
 import Summary from '../pages/AiGenerationPages/Summary';
 import ContactPage from '../pages/ContactPage/ContactPage';
+import Chat from '../pages/AiGenerationPages/Chat';
 
 export default function Main() {
   return (
@@ -21,6 +22,7 @@ export default function Main() {
         <Route path='/facebook-ads' element={<FacebookAdsPage />} />
         <Route path='/google-ads' element={<GoogleAds />} />
         <Route path='/grammar-correction' element={<GrammarCorrectionPage />} />
+        <Route path='/chat' element={<Chat />} />
         <Route path='/generate-summary' element={<Summary />} />
         <Route path='/javascript-helper' element={<JavaScriptHelperPage />} />
         <Route path='/time-complexity' element={<TimeComplexity />} />
