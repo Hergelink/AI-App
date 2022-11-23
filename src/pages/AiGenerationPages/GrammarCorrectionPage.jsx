@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import '../Pages.css';
 import loadingCube from '../../images/klevvvers-cube.png';
-
+import languageIcon from '../../images/header-icons/language-icon.png'
 export default function GrammarCorrectionPage() {
   const [userPrompt, setUserPrompt] = useState('');
 
@@ -49,6 +49,11 @@ export default function GrammarCorrectionPage() {
   return (
     <div className='productDiv'>
       <div className='infoArea'>
+      <img
+          src={languageIcon}
+          alt='language icon'
+          className='titleIcons'
+        />
         <h1>Grammar Correction</h1>
         <p>Correct sentences or paragraphs into standard English.</p>
       </div>

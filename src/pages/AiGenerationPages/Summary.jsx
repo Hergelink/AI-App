@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import '../Pages.css';
 import loadingCube from '../../images/klevvvers-cube.png';
-
+import summaryIcon from '../../images/title-icons/summary-icon.png'
 export default function Summary() {
   const [userPrompt, setUserPrompt] = useState('');
 
@@ -44,6 +44,11 @@ export default function Summary() {
   return (
     <div className='productDiv'>
       <div className='infoArea'>
+      <img
+          src={summaryIcon}
+          alt='summary icon'
+          className='titleIcons'
+        />
         <h1>Generate Summary</h1>
         <p>Generate summaries based on paragraphs</p>
       </div>

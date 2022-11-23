@@ -26,6 +26,7 @@ export default function LandingPage() {
       <div className='heroContainer'>
         <div className='heroTextContainer'>
           <h1>Generate text content on demand with the help of GPT-3</h1>
+          
           <h4>
             AI powered software that generates ad copies, product descriptions,
             sales copies, blog paragraphs, video scripts more.
@@ -39,7 +40,7 @@ export default function LandingPage() {
       <hr className='landingPageHr' />
 
       <div className='thirdInfoDiv'>
-        <h3>Automatically generate unique and human-like copy in <span id='secondsText'>seconds.</span></h3>
+        <h3>Automatically generate unique and human-like copy in <span id='gradientText'>seconds.</span></h3>
         <p>
           Built on top of the world’s most advanced AI language model GPT-3.
         </p>
@@ -117,7 +118,7 @@ export default function LandingPage() {
           <div className='featureItemContext'>
             <img src={plusIcon} alt='plus icon' />
             <h3>Recommend more features</h3>
-            <p>We realy want to hear your recommendations!</p>
+            <p>We really want to hear and implement your recommendations!</p>
           </div>
         </Link>
       </div>

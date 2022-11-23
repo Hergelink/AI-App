@@ -76,7 +76,7 @@ header {
   top: -0.3rem;
   left: -1.1rem;
   width: 240px;
-  height: 200vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   border-right: 1px solid black;
@@ -163,16 +163,19 @@ header {
 /* MAIN AREA */
 
 main {
-  /* min-height: 100vh; */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.productDiv {
+  margin-top: 2rem;
+ margin-bottom: 4rem;
 }
 
 footer {
-  /* delete margin top later */
-  margin-top: 4rem;
   height: 5rem;
   display: flex;
   align-items: center;
@@ -311,7 +314,7 @@ footer h4 {
   /* MAIN AREA */
 
   main {
-    min-height: 80vh;
+    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;

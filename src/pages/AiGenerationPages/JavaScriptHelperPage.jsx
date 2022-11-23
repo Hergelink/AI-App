@@ -57,7 +57,6 @@ export default function JavaScriptHelperPage() {
           className='titleIcons'
         />
         <h1>JavaScript Helper</h1>
-
         <p>
           Ask javascript related questions and let the AI suggest you the
           possible actions you can take.
