@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
 import '../Pages.css';
 import loadingCube from '../../images/klevvvers-cube.png';
+import timeIcon from '../../images/title-icons/time-icon.png';
 
 export default function TimeComplexity() {
     const [userPrompt, setUserPrompt] = useState('');
@@ -51,6 +52,7 @@ export default function TimeComplexity() {
   return (
     <div className='productDiv'>
       <div className='infoArea'>
+      <img src={timeIcon} alt='youtube icon' className='titleIcons' />
         <h1>Calculate Time Complexity</h1>
         <p>Let the AI calculate your functions time complexity.</p>
       </div>

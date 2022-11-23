@@ -24,7 +24,7 @@ export default function ContactPage() {
               <button id='gpt3' onClick={handleGPT}>
                 Davinci
               </button>
-              the Ai model that you have been using if you tried our products
+              the Ai model that you have been using if you tried our products.
             </p>
             Visit the
             <Link to='/' id='link-to-faq'>

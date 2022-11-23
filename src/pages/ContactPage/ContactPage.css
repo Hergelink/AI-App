@@ -99,6 +99,10 @@ textarea {
   border: 1px solid rgba(0, 0, 0, 0.269);
   border-radius: 8px;
   resize: none;
+
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+ 
 }
 
 textarea:focus {
