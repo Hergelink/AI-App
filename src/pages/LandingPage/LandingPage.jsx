@@ -33,7 +33,7 @@ export default function LandingPage() {
           </h4>
         </div>
         <div className='coverImageContainer'>
-          <img src={heroImage} alt='ai drawn' />
+          <img loading='lazy' src={heroImage} alt='ai drawn' />
         </div>
       </div>
 
