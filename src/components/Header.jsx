@@ -69,32 +69,32 @@ export default function Header() {
                     </li>
 
                     <li>
-                      <Link to='grammar-correction' onClick={scrollToTop}>
-                        Grammar Correction
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link to='chat' onClick={scrollToTop}>
-                        Chat
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link to='javascript-helper' onClick={scrollToTop}>
-                        JavaScript Helper
-                      </Link>
-                    </li>
-
-                    <li>
                       <Link to='youtube-ideas' onClick={scrollToTop}>
                         Youtube Ideas
                       </Link>
                     </li>
 
                     <li>
+                      <Link to='grammar-correction' onClick={scrollToTop}>
+                        Grammar Correction
+                      </Link>
+                    </li>
+
+                    <li>
                       <Link to='generate-summary' onClick={scrollToTop}>
                         Generate Summary
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link to='chat' onClick={scrollToTop}>
+                        Chat with AI
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link to='javascript-helper' onClick={scrollToTop}>
+                        JavaScript Helper
                       </Link>
                     </li>
 
