@@ -28,7 +28,7 @@ export default function Chat() {
     await openai
       .createCompletion({
         model: 'text-davinci-002',
-        prompt: `The following is a conversation with an AI chatbot. The chatbot is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI chatbot by OpenAI. What do you want to talk about today?\nHuman: ${userPrompt}`,
+        prompt: `The following is a conversation with an AI chatbot. The chatbot is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI chatbot by Klevvvers. What do you want to talk about today?\nHuman: ${userPrompt}`,
         temperature: 0.9,
         max_tokens: 150,
         top_p: 1,
