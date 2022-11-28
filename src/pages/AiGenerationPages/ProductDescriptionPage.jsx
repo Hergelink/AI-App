@@ -35,10 +35,8 @@ export default function ProductDescriptionPage() {
       .createCompletion({
         model: 'text-davinci-002',
         prompt: `Write a detailed, smart, informative and professional product description for ${userPrompt}`,
-        // temperature: 1,
         temperature: temp,
         max_tokens: 200,
-        // max_tokens: 30,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,

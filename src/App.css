@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap');
 
 :root {
   --blue: rgba(10, 105, 178, 255);
@@ -13,7 +13,7 @@
   box-sizing: border-box;
   background-color: white;
   color: black;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Public Sans', sans-serif;
 }
 
 /* HEADER AREA */
@@ -172,21 +172,79 @@ main {
 
 .productDiv {
   margin-top: 2rem;
- margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
+/* FOOTER AREA */
+
 footer {
-  height: 5rem;
+  padding: 40px;
+  min-height: 8rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: black;
   color: white;
 }
 
+.footerLogoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  background-color: transparent;
+  height: 3rem;
+  width: 200px;
+}
+
+.footerLogoDiv h3 {
+  background-color: transparent;
+  color: white;
+  font-size: 1.7rem;
+}
+
+#footerLogo {
+  height: 100%;
+  background-color: transparent;
+}
+
+.footerLinksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: transparent;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.footerLinksContainer a {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 2rem;
+}
+
+.footerIcons {
+  background-color: transparent;
+  height: 100%;
+}
+
 footer h4 {
   background-color: black;
   color: white;
+}
+
+#hergelink {
+  background-color: transparent;
+  color: white;
+  text-decoration: underline salmon dashed;
 }
 
 @media (min-width: 768px) {
@@ -203,7 +261,7 @@ footer h4 {
   }
 
   .mobileModal {
-   display: none;
+    display: none;
   }
 
   .desktopMenu {
@@ -211,8 +269,6 @@ footer h4 {
     gap: 20px;
     font-size: 1.1rem;
   }
-
-  
 
   .accountButtons {
     width: 200px;
@@ -278,7 +334,6 @@ footer h4 {
     bottom: -20rem;
     left: 50%;
     transform: translate(-50%);
-    
 
     width: 300px;
     height: 320px;
@@ -325,5 +380,11 @@ footer h4 {
     margin-top: 5rem;
     width: 90%;
     max-width: 800px;
+  }
+
+  /* FOOTER AREA */
+
+  .footerLinksContainer {
+    gap: 40px;
   }
 }
