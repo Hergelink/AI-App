@@ -24,11 +24,6 @@ Klevvvers is a website powered by Open Ai's GPT-3 to create text-content on dema
 **Server:** Netlify, OpenAi API
 
 
-# Klevvvers Ai
-
-Klevvvers is a website powered by Open Ai's GPT-3 to create text-content on demand.
- 
-
 ## 🔗 Links
 Live Site: https://klevvvers.netlify.app/
 
