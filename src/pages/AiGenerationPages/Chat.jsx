@@ -11,13 +11,19 @@ export default function Chat() {
 
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const [conversation, setConversation] = useState(userPrompt);
+  console.log(conversation)
 
+  const handleSubmit = async () => {
     setLoading(true);
-    // {userPrompt} send this to api
 
-    // OPEN AI-START
+    setConversation(
+      
+
+      // prevState + userPrompt + '\n';
+    );
+    
+    console.log(userPrompt);
 
     const configuration = new Configuration({
       apiKey: process.env.REACT_APP_API_KEY,
@@ -27,14 +33,15 @@ export default function Chat() {
 
     await openai
       .createCompletion({
-        model: 'text-davinci-002',
-        prompt: `The following is a conversation with an AI chatbot. The chatbot is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI chatbot by Klevvvers. What do you want to talk about today?\nHuman: ${userPrompt}`,
-        temperature: 0.9,
+        model: 'text-davinci-003',
+        // prompt: `The following is a conversation with an AI chatbot. The chatbot is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI chatbot by Klevvvers. What do you want to talk about today?\nHuman: ${userPrompt}`,
+        prompt: conversation,
+        temperature: 0.4,
         max_tokens: 150,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0.6,
-        stop: [' Human:', ' AI:'],
+        // stop: [' Human:', ' AI:'],
       })
       .then((response) => {
         setAiResponse(response.data.choices[0].text);
