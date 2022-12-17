@@ -11,19 +11,24 @@ export default function Chat() {
 
   const [loading, setLoading] = useState(false);
 
-  const [conversation, setConversation] = useState(userPrompt);
-  console.log(conversation)
+  const message = [
+    'AI: I am a helpfull chatbot named gpt-3. Human: Great, lets talk. AI: sure, we can start the conversation.',
+  ];
+
+  const [conversation, setConversation] = useState(message);
 
   const handleSubmit = async () => {
     setLoading(true);
 
-    setConversation(
-      
-
-      // prevState + userPrompt + '\n';
-    );
-    
-    console.log(userPrompt);
+    setConversation((oldArray) => {
+      // message.join(`Human: ${userPrompt}`);
+      // message + `Human: ${userPrompt}`;
+      // return [...oldArray, message + `Human: ${userPrompt}`];
+      const newMessage = message + `Human: ${userPrompt}`
+      // return [...oldArray, `Human: ${userPrompt}`];
+      return [...oldArray, newMessage];
+    });
+    console.log(conversation);
 
     const configuration = new Configuration({
       apiKey: process.env.REACT_APP_API_KEY,
@@ -41,12 +46,20 @@ export default function Chat() {
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0.6,
-        // stop: [' Human:', ' AI:'],
+        stop: [' Human:'],
       })
       .then((response) => {
-        setAiResponse(response.data.choices[0].text);
+        const aiResponse = response.data.choices[0].text;
+        setAiResponse(aiResponse);
+        setConversation((oldArray) => {
+          // message.join(`AI: ${aiResponse}`);
+          // return [...oldArray, message + `AI: ${aiResponse}`];
+          const newMessage = message + `AI: ${aiResponse}`
+          return [...oldArray, newMessage];
+          
+        });
       });
-
+    console.log(message);
     // OPEN AI-END
     setLoading(false);
   };
